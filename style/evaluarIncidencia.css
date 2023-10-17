@@ -467,6 +467,16 @@ input[type="time"]::-webkit-calendar-picker-indicator {
       display: none;
 }
 
+.logbook-buttons{
+      display: grid;
+      grid-template-columns: 1fr;
+      margin-top: 1rem !important;
+      margin-bottom: 2rem !important;
+      margin: 0 auto;
+      width: 60%;
+      grid-column: span 2;
+
+}
 
 select {
       -webkit-appearance: none;
@@ -479,17 +489,6 @@ select {
 
 input[type="time"]::selection{
       background-color: transparent;
-}
-
-.logbook-buttons{
-      display: grid;
-      grid-template-columns: 1fr;
-      margin-top: 1rem !important;
-      margin-bottom: 2rem !important;
-      margin: 0 auto;
-      width: 60%;
-      grid-column: span 2;
-
 }
 
 .btn-registrar{
