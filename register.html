@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/register.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <title>Registrarse</title>
+</head>
+<body>
+      
+      <div class="login-container">
+            <img src="./img/avatar-img.png" alt="avatar" class="avatar-container">
+            <form action="index.html">
+                  <h2>Registrar</h2>
+                  <div class="input-div one">
+                    <div class="i">
+                          <i class="fas fa-user"></i>
+                    </div>
+                    <div>
+                          <h6>Username</h6>
+                          <input type="text" class="input">
+                    </div>
+                  </div>
+                  <div class="input-div two">
+                        <div class="i">
+                              <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                              <h6>Email</h6>
+                              <input type="email" class="input">
+                        </div>
+                  </div>
+                  <div class="input-div three">
+                    <div class="i">
+                          <i class="fas fa-lock"></i>
+                    </div>
+                    <div>
+                          <h6>Password</h6>
+                          <input type="password" class="input">
+                    </div>
+                  </div>
+                  <input type="submit" class="btn" value="Registrarse"> 
+                  <span class="msg">¿Ya tienes una cuenta? <a href="./login.html">Inicia Sesión</a></span>              
+              </form>
+      </div>
+</body>
+</html>
+
+<script>
+      const forms = document.querySelectorAll('input');
+
+      function focusFuncion(){
+            let parent = this.parentNode.parentNode;
+            parent.classList.add('focus');
+      }
+
+      function quitarFuncion(){
+            let parent = this.parentNode.parentNode;
+            if(this.value == ""){
+                  parent.classList.remove('focus');
+            }
+      }
+
+      forms.forEach(input => {
+            input.addEventListener('focus', focusFuncion);
+            input.addEventListener('blur', quitarFuncion);
+      });
+
+</script>
