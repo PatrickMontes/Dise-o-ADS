@@ -3,9 +3,9 @@
 <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="./style/evaluarIncidencia.css">
-      <title>Evaluar Incidencia</title>
-</head>
+      <link rel="stylesheet" href="./style/listaIncidenciasReportados.css">
+      <title>Lista de Incidentes Reportados</title>
+</head> 
 <body>
       <div class="admin-dashboard">
 
@@ -110,35 +110,64 @@
            
                 <div class="panel-header">
                     <div class="icono">
-                        <ion-icon name="bug-outline"></ion-icon>
+                        <ion-icon name="folder-open-outline"></ion-icon>
                     </div>
-                    <h2>Evaluar Incidencia</h2>
+                    <h2>Lista de Incidentes Reportados</h2>
                 </div>
-    
-                <div class="ds-panel-content"> 
-                  <form action="index.html" method="post" class="logbook-form">
-                        <div class="input-wrap w-100">
-                              <select class="logbook-input">
-                                  <option value="" >Seleccione</option>
-                              </select>
-                              <label>Tipo</label>
-                              <ion-icon class="icon" name="ticket-outline"></ion-icon>
-                          </div>
 
-                        <div class="input-wrap textarea w-100">
-                            <textarea name="Message" autocomplete="off" class="logbook-input" required></textarea>
-                            <label class="text">Descripción</label>
-                            <ion-icon class="icon" name="chatbubble-ellipses-outline"></ion-icon>
-                        </div>
-
-                        <div class="logbook-buttons w-100">
-                            <button class="btn-registrar registrar">
-                                Evaluar
-                            </button>
-                        </div>
-                  </form>       
-                </div>
-    
+               <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Hora</th>
+                                <th>Accion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>10-10-2023</td>
+                                <td>4:30 pm</td>
+                                <td class="primary"><a href="#">Ver Detalle</a></td>
+                            </tr>
+                            <tr>
+                              <td>11-10-2023</td>
+                              <td>5:30 pm</td>
+                              <td class="primary"><a href="#">Ver Detalle</a></td>
+                            </tr>
+                            <tr>
+                              <td>12-10-2023</td>
+                              <td>3:30 pm</td>
+                              <td class="primary"><a href="#">Ver Detalle</a></td>
+                            </tr>
+                            <tr>
+                              <td>13-10-2023</td>
+                              <td>1:30 pm</td>
+                              <td class="primary"><a href="#">Ver Detalle</a></td>
+                            </tr>
+                            <tr>
+                              <td>14-10-2023</td>
+                              <td>5:30 pm</td>
+                              <td class="primary"><a href="#">Ver Detalle</a></td>
+                            </tr>
+                            <tr>
+                              <td>15-10-2023</td>
+                              <td>6:30 pm</td>
+                              <td class="primary"><a href="#">Ver Detalle</a></td>
+                            </tr>
+                            <tr>
+                              <td>16-10-2023</td>
+                              <td>7:30 pm</td>
+                              <td class="primary"><a href="#">Ver Detalle</a></td>
+                            </td>
+                            </tr>
+                            <tr>
+                              <td>17-10-2023</td>
+                              <td>4:30 pm</td>
+                              <td class="primary"><a href="#">Ver Detalle</a></td>
+                            </tr>
+                        </tbody>
+                    </table>  
             </div>
     
         </div>
@@ -169,21 +198,5 @@
     }
     menulist.forEach((item)=>
     item.addEventListener('click', activeLink));
-
-
-    const inputs = document.querySelectorAll(".logbook-input");
-
-    inputs.forEach(ipt =>{
-        ipt.addEventListener("focus", () =>{
-            ipt.parentNode.classList.add("focus");
-            ipt.parentNode.classList.add("not-empty");
-        });
-        ipt.addEventListener("blur", () =>{
-            if(ipt.value == ""){
-                ipt.parentNode.classList.remove("not-empty");
-            }
-            ipt.parentNode.classList.remove("focus");
-        });
-    });
 </script>
 </html>

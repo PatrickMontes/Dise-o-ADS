@@ -3,8 +3,8 @@
 <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="./style/evaluarIncidencia.css">
-      <title>Evaluar Incidencia</title>
+      <link rel="stylesheet" href="./style/descripcionIncidenteReportado.css">
+      <title>Detalle de Incidente</title>
 </head>
 <body>
       <div class="admin-dashboard">
@@ -110,33 +110,27 @@
            
                 <div class="panel-header">
                     <div class="icono">
-                        <ion-icon name="bug-outline"></ion-icon>
+                        <ion-icon name="newspaper-outline"></ion-icon>
                     </div>
-                    <h2>Evaluar Incidencia</h2>
+                    <h2>Detalle de Incidente Reportado</h2>
                 </div>
     
                 <div class="ds-panel-content"> 
-                  <form action="index.html" method="post" class="logbook-form">
-                        <div class="input-wrap w-100">
-                              <select class="logbook-input">
-                                  <option value="" >Seleccione</option>
-                              </select>
-                              <label>Tipo</label>
-                              <ion-icon class="icon" name="ticket-outline"></ion-icon>
-                          </div>
-
-                        <div class="input-wrap textarea w-100">
-                            <textarea name="Message" autocomplete="off" class="logbook-input" required></textarea>
-                            <label class="text">Descripción</label>
-                            <ion-icon class="icon" name="chatbubble-ellipses-outline"></ion-icon>
+                        <div class="detalle">
+                              <h5 class="detalle-subtitulo">Fecha:</h5>
+                              <p>10-10-2023</p>
                         </div>
-
-                        <div class="logbook-buttons w-100">
-                            <button class="btn-registrar registrar">
-                                Evaluar
-                            </button>
+                        <div class="detalle">
+                              <h5 class="detalle-subtitulo">Hora:</h5>
+                              <p>4:30 p.m</p>
                         </div>
-                  </form>       
+                        <div class="detalle">
+                              <h5 class="detalle-subtitulo">Detalle:</h5>
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nisi eum suscipit labore quidem incidunt repudiandae exercitationem commodi, nulla laudantium, possimus excepturi rerum id minus velit eius repellat necessitatibus libero.</p>
+                        </div>
+                        <button class="btn-evaluar evaluar">
+                              Evaluar Incidente
+                          </button>
                 </div>
     
             </div>
